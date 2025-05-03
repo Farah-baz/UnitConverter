@@ -14,8 +14,8 @@ import java.util.Scanner;
 public class UnitConverter {
 
     public static double kilometersToMiles(double km) {
-        return km * 0.62;
-    }
+       return km * 0.62;
+   }
 
     public static double milesToKilometers(double miles) {
         return miles / 0.621371;
