@@ -1,7 +1,10 @@
 /**
- * Version: 1.1
- * Feature: Temperature conversion (C ↔ F)
+ * Version: 1.3
+ * Features:
+ * - Temperature conversion (C ↔ F)
+ * - Weight conversion (kg ↔ lb)
  */
+
 
 package csm_project;
 
@@ -13,9 +16,10 @@ import java.util.Scanner;
 
 public class UnitConverter {
 
-    public static double kilometersToMiles(double km) {
-        return km * 0.621371;
-    }
+   public static double kilometersToMiles(double km) {
+       return km * 0.621371;
+   }
+
 
     public static double milesToKilometers(double miles) {
         return miles / 0.621371;
