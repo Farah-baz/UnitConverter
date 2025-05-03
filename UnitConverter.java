@@ -1,7 +1,10 @@
 /**
- * Version: 1.1
- * Feature: Temperature conversion (C ↔ F)
+ * Version: 1.3
+ * Features:
+ * - Temperature conversion (C ↔ F)
+ * - Weight conversion (kg ↔ lb)
  */
+
 
 package csm_project;
 
@@ -13,9 +16,11 @@ import java.util.Scanner;
 
 public class UnitConverter {
 
-    public static double kilometersToMiles(double km) {
-       return km * 0.62;
+
+   public static double kilometersToMiles(double km) {
+       return km * 0.621371;
    }
+
 
     public static double milesToKilometers(double miles) {
         return miles / 0.621371;
@@ -28,6 +33,16 @@ public class UnitConverter {
     public static double fahrenheitToCelsius(double f) {
         return (f - 32) * 5 / 9;
     }
+
+    public static double poundsToKilograms(double pounds) {
+        return pounds * 0.453592;
+    }
+
+    public static double kilogramsToPounds(double kilograms) {
+        return kilograms * 2.20462;
+    }
+
+
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -53,7 +68,16 @@ public class UnitConverter {
         System.out.print("Enter temperature in Fahrenheit: ");
         double f = scanner.nextDouble();
          System.out.println(f + "°F = " + fahrenheitToCelsius(f) + "°C");
-
+         // lp to Kg
+        System.out.print("Enter weight in pounds: ");
+        double pounds = scanner.nextDouble();
+        double kg = poundsToKilograms(pounds);
+        System.out.println(pounds + " pounds = " + kg + " kilograms");
+        //Kg to lp
+        System.out.print("Enter weight in kilograms: ");
+        double kilograms = scanner.nextDouble();
+        double lb = kilogramsToPounds(kilograms);
+        System.out.println(kilograms + " kilograms = " + lb + " pounds");
         scanner.close();
     }
 }
