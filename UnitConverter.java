@@ -1,7 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+/**
+ * Version: 1.1
+ * Feature: Temperature conversion (C ↔ F)
  */
+
 package csm_project;
 
 /**
@@ -20,6 +21,14 @@ public class UnitConverter {
         return miles / 0.621371;
     }
 
+    public static double celsiusToFahrenheit(double c) {
+        return (c * 9 / 5) + 32;
+    }
+
+    public static double fahrenheitToCelsius(double f) {
+        return (f - 32) * 5 / 9;
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -36,6 +45,14 @@ public class UnitConverter {
         double mi = scanner.nextDouble();
         double kms = milesToKilometers(mi);
         System.out.println(mi + " miles = " + kms + " km");
+        // C TO F
+        System.out.print("Enter temperature in Celsius: ");
+        double c = scanner.nextDouble();
+        System.out.println(c + "°C = " + celsiusToFahrenheit(c) + "°F");
+        // F TO C
+        System.out.print("Enter temperature in Fahrenheit: ");
+        double f = scanner.nextDouble();
+         System.out.println(f + "°F = " + fahrenheitToCelsius(f) + "°C");
 
         scanner.close();
     }
